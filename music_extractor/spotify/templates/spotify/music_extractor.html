@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Extractor</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="comments">Enter Comments Here:</label>
+        <div>
+            <textarea id="comments" name="comments" rows="4" cols="50">{{ comments }}</textarea>
+        </div>
+        <label for="songs">Enter Songs Here:</label>
+        <div>
+            <textarea id="songs" name="songs" rows="4" cols="50"></textarea>
+        </div>
+        <label for="songs">Spotify Playlist ID:</label>
+        <div>
+            <input id="playlist_id" name="playlist_id" type="text" value="{{ playlist_id }}" />
+        </div>
+        <button type="submit">Submit</button>
+        {% for key, value in top_list.items %}
+            <div>
+                <p>{{ key }} x {{ value }}</p>
+            </div>
+        {% endfor %}
+    </form>
+</body>
+</html>
