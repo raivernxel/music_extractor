@@ -43,8 +43,8 @@ from spotipy.oauth2 import SpotifyOAuth
 from django.conf import settings
 
 # settings.py
-SPOTIFY_CLIENT_ID = '88fd736385c344fa95fc400d842e48d3'
-SPOTIFY_CLIENT_SECRET = '33609dbcaeb4486c8e28492c2f2e8bd8'
+SPOTIFY_CLIENT_ID = ''
+SPOTIFY_CLIENT_SECRET = ''
 SPOTIFY_REDIRECT_URI = 'http://localhost:8000/spotify/callback/'
 
 
